@@ -1,0 +1,132 @@
+<!Doctype html>
+<head lang = "en">
+  <link rel ="stylesheet" href = "../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+  <title>Tea Quiz</title>
+</head>
+<body class="body-pages">
+  <nav class = "flex" >
+    <a href = "index.html"><img src = "../Media/Logo.svg" alt = "logo of tea cup"></a>
+	 <ul role = "list" class = "nav-ul flex">
+	   <li class= "nav-li" ><a href = "guide.html">Guide</a></li>
+	   <li class= "nav-li" ><a href = "quiz.html">Quiz</a></li>
+  </ul>
+  </nav>
+<header><h1>Tea Quiz</h1></header>
+  <div class = "flex">
+  <section id = "quiz-start-section" class = "flex">
+    <h2>Ready To Take The Quiz?</h2>
+    <p> The Tea quiz is designed to find a tea that suits your needs. Take our quiz to find out your perfect
+      tea below. You will be one step closer to becoming a tea connoisseur!</p>
+      <!-- Trigger the javascript to load the next portion of quiz questions on the page -->
+    <button onclick= "hideSection()" class = "small-button" >Begin Quiz</button>
+  </section>
+<!-- Quiz questions section-->
+  <section style = "display:none" id = "question-container" class = "flex">
+    <h2 id = "question-number"></h2>
+    <h3 id = "question"></h3>
+    <button  id = "option1" type = "button" ></button>
+    <button  id = "option2" type = "button" ></button>
+    
+    
+  </section>
+<!-- Quiz Result section -->
+  <section style = "display: none;" id = "quiz-result-section" class = "flex">
+    <h2>You Perfect True Tea is </h2>
+    <h3 id = "quiz-result"></h3>
+    <a href = "quiz.html"><button type = "button">Take the Quiz Again</button></a>
+    <a href = "guide.html"><button type = "button">Learn More</button></a>
+  </section> 
+</div>
+<footer>
+  <h4> © Tea Space CB 2022</h4>
+</footer>
+<script>
+let score = 0, j = 0;
+let result;
+
+function hideSection(){
+  /* Hide the introduction to the quiz */
+  document.getElementById("quiz-start-section").style.display = "none";
+  document.getElementById("question-container").style.display = "inherit";
+  changeQuestion();
+}
+
+/* Question objects the questions array will iterate through */
+const q1 = {
+  question: "Do you prefer day or night?",
+  option1: "Day", option2: "Night"
+}
+const q2 = {
+  question: "Do you want to help with focus or relaxation?",
+  option1: "Focus", option2: "Concentration"
+}
+const q3 = {
+  question: "Do you perfer strong or light flavors?",
+  option1: "Strong", option2: "Light"
+}
+const q4 = {
+  question: "Would you like a tea for health benefits or taste?",
+  option1: "Health", option2: "Taste"
+}
+const q5 = {
+  question: "Do you prefer an earthy or floraly taste?",
+  option1: "Earthy", option2: "Floraly"
+}
+
+const questions = [q1,q2,q3,q4,q5];
+
+function increment1(){
+  changeQuestion();
+}
+
+function increment2(){
+  score += 1;
+  changeQuestion();
+}
+
+document.getElementById("option1").addEventListener("click", increment1);
+document.getElementById("option2").addEventListener("click" , increment2);
+
+
+function changeQuestion(){
+  if(j < questions.length){
+    document.getElementById("question-number").innerHTML = questions[j].question;
+    document.getElementById("option1").innerHTML = questions[j].option1;
+    document.getElementById("option2").innerHTML = questions[j].option2;
+    j++;
+  } else {
+    /* Display Final Results Section of Quiz */
+    document.getElementById("question-container").style.display = "none";
+    document.getElementById("quiz-result-section").style.display = "inherit";
+    /* Assigns numeric score to tea type. */
+    switch(score){
+      case 0:
+        result = "Black Tea";
+        break;
+      case 1:
+        result = "'Dark' Post-Fermented Tea";
+        break;
+      case 2:
+        result = "Green Tea";
+        break;
+      case 3: 
+        result = "Oolong Tea";
+        break;      
+      case 4:
+        result = "Yellow Tea";
+        break;
+      case 5:
+        result = "White Tea";
+        break;
+      default:
+        result = "Green Tea";      
+
+    }
+    document.getElementById("quiz-result").innerHTML = result;
+  }
+}
+</script>
+</body>

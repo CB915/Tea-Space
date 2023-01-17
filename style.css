@@ -1,0 +1,230 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Hind+Siliguri:wght@300;600&family=Major+Mono+Display&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@300;500&display=swap');
+
+body{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: #446C8B;
+  font-family:'Rosario', sans-serif;
+  background:
+  radial-gradient(circle 800px at 50% 100%, #6e9173 50%, #a4c295 50%, #a4c295 55%, #eafaff 52%);
+  background-repeat: no-repeat;
+}
+.body-pages{
+  background: #eafaff;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+  font-family:'Rosario', sans-serif;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+header{
+  background: radial-gradient(circle 400px at 50%, #a4c295 20%, transparent 20%);
+  background-repeat: no-repeat;
+  padding: 75px 0px;
+}
+
+section{
+  line-height: 200%;
+  margin: auto 20px 20px;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 500px;
+  align-self: center;
+  gap: 0px;
+}
+
+.buttons{
+  box-sizing: border-box;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0px 10px;
+}
+
+button{
+  border: none;
+  font-family: 'Rosario', sans-serif;
+  color: #446C8B;
+  border-radius: 50px;
+  padding: 5px 25px;
+  background-color: white;
+}
+
+.button-two{
+  background-color: #cedfe5;
+}
+
+h1{
+  font-family: 'Rosario', sans-serif;
+  text-align: center;
+  font-size: 6vw;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #446C8B;
+  mix-blend-mode: multiply;
+}
+
+h2{
+  font-family: 'Rosario', sans-serif;
+  letter-spacing: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  color: 446C8Bx;
+}
+
+h4{
+  letter-spacing: 5px;
+  line-height: 12px;
+}
+
+p{
+  font-size: 1.2vh;
+  text-align: justify;
+  font-weight: 100;
+  line-height: 250%;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* Navigation */
+
+nav{
+  padding: 10px 40px;
+}
+
+.nav-ul{
+  list-style: none;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 5px;
+}
+
+.nav-li > a{
+  padding: 0px 5px;
+  text-decoration: none;
+  font-weight: lighter;
+  letter-spacing: 10px;
+  font-size: 12px;
+  color: #366284;
+  mix-blend-mode: multiply;
+}
+
+img{
+  width: 50px;
+}
+
+.homepage-header{
+  text-align: center;
+  padding: 2vw;
+  padding-right: 0px;
+  margin: auto;
+  background: none;
+}
+/* Footer */
+footer{
+  background-color: #536F8A;
+  padding: 10px;
+  color: White;
+}
+
+footer > *{
+  text-align: center;
+  font-weight: lighter;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Quiz Page Styling */
+div > section > * {
+  color: #536F8A;
+}
+.small-button{
+  background-color: #6e9173;
+  color: white;
+}
+#question-container {
+  text-align: center;
+}
+.guide-container{
+  box-sizing: border-box;
+  padding: 20px;
+  flex-direction: row;
+  max-width: 80%;
+  align-self: center;
+}
+.tea-guide{
+  max-width: 800px;
+  align-self: center;
+  padding: 0px 20px;
+}
+.tea-guide > p {
+  color:#536F8A;
+  text-align: left;
+}
+.menu{
+  max-height: 25px;
+  overflow-y: scroll;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin: 10px 0px;
+}
+.menu > li{
+  list-style: none;
+}
+.menu > li > a{
+  text-decoration: none;
+  color: #536F8A;
+  font-size: 16px;
+  letter-spacing: 10px;
+}
+
+/* Breakpoints: currently for desktop */
+@media only screen and (min-width: 500px){
+  .homepage-header{
+    margin-top: 3vw;
+  }
+
+  nav.flex{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-ul{
+    gap:30px;
+  }
+
+  h1{
+    font-size: 2.5vw;
+    letter-spacing: 3vw;
+  }
+
+  h2{
+    letter-spacing: 0.25vw;
+  }
+  p{
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .guide-container{
+    flex-direction: column;
+    padding: 20px;
+  }
+}
