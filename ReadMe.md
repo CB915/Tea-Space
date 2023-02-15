@@ -12,4 +12,4 @@ The quiz feature was implemented with Javascript. It utilizes conditionals, func
 objects, and arrays. 
 
 
-The website uses information found from wikipedia and original custom graphics. 
+The website uses original custom graphics. 
