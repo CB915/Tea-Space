@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rosario:wght@300;500&display=swap');
-
+html{
+  min-height: 100%;
+}
 body{
   display: flex;
   justify-content: space-between;
@@ -10,11 +12,11 @@ body{
   color: #446C8B;
   font-family:'Rosario', sans-serif;
   background:
-  radial-gradient(circle 800px at 50% 100%, #6e9173 50%, #a4c295 50%, #a4c295 55%, #eafaff 52%);
+  radial-gradient(circle 800px at 50% 100%, #6e9173 50%, #a4c295 50%, #a4c295 55%, #fdfffe 52%);
   background-repeat: no-repeat;
 }
 .body-pages{
-  background: #eafaff;
+  background: #fdfffe;
   background-repeat: no-repeat;
   overflow-y: auto;
   font-family:'Rosario', sans-serif;
@@ -28,7 +30,6 @@ body{
     gap: 10px;
 }
 header{
-  background: radial-gradient(circle 400px at 50%, #a4c295 20%, transparent 20%);
   background-repeat: no-repeat;
   padding: 75px 0px;
 }
@@ -60,15 +61,15 @@ button{
   padding: 5px 25px;
   background-color: white;
 }
-
-.button-two{
-  background-color: #cedfe5;
+#option1, #option2, #quiz-button{
+  background-color: #6e9173;
+  color: #fdfffe;
 }
 
 h1{
   font-family: 'Rosario', sans-serif;
   text-align: center;
-  font-size: 6vw;
+  font-size: minmax(100px,400px);
   letter-spacing: 20px;
   text-transform: uppercase;
   margin: 0;
@@ -90,14 +91,16 @@ h4{
 }
 
 p{
-  font-size: 1.2vh;
+  font-size: 0.65rem;
   text-align: justify;
   font-weight: 100;
   line-height: 250%;
   letter-spacing: 2px;
   color: white;
 }
-
+#quiz-start-section > p{
+  color: #366284;
+}
 /* Navigation */
 
 nav{
@@ -148,8 +151,8 @@ footer > *{
 }
 
 /* Quiz Page Styling */
-div > section > * {
-  color: #536F8A;
+div > section > button > * {
+  color: white;
 }
 .small-button{
   background-color: #6e9173;
@@ -168,7 +171,7 @@ div > section > * {
 .tea-guide{
   max-width: 800px;
   align-self: center;
-  padding: 0px 20px;
+  padding: 0px 40px;
 }
 .tea-guide > p {
   color:#536F8A;
@@ -208,16 +211,11 @@ div > section > * {
     gap:30px;
   }
 
-  h1{
-    font-size: 2.5vw;
-    letter-spacing: 3vw;
-  }
-
   h2{
     letter-spacing: 0.25vw;
   }
   p{
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
   }
 
