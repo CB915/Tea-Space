@@ -12,7 +12,7 @@ body{
   color: #446C8B;
   font-family:'Rosario', sans-serif;
   background:
-  radial-gradient(circle 800px at 50% 100%, #6e9173 50%, #a4c295 50%, #a4c295 55%, #fdfffe 52%);
+  radial-gradient(circle 800px at 50% 100%, #a4c295 55%, #fdfffe 52%);
   background-repeat: no-repeat;
 }
 .body-pages{
@@ -69,7 +69,7 @@ button{
 h1{
   font-family: 'Rosario', sans-serif;
   text-align: center;
-  font-size: minmax(100px,400px);
+  font-size: 1.5rem;
   letter-spacing: 20px;
   text-transform: uppercase;
   margin: 0;
